@@ -7,57 +7,69 @@ class AI_Chatbot {
         String name = sc.nextLine();
         System.out.print("Bot : ");System.out.println("Hello " + name + " Nice to meet you");
         String input = "";
+        int count = 0;
 
         while (!input.equals("stop")) {
-
             String[] arr = {"hey","hello","hi","hey there"};
-            String[] arr1 = {"tell me about yourself","who are you","tell me something about yourself"};
+            String[] arr1 = {"tell me something about yourself","tell me about yourself","who are you","tell me something about yourself"};
             String[] arr3 = {"great","nice","awesome"};
             String[] arr4 = {"who made you","who is your owner","who is your boss","who write your code"};
-            String[] arr5 = {"yeah nice to meet you too","nice to meet you too","yea","yeah","ya","you too","that is great","that is nice","that is awesome","you are great","you are nice","you are awesome"};
+            String[] arr5 = {"yeah nice to meet you too","nice to meet you too","you too","that is great","that is nice","that is awesome","you are great","you are nice","you are awesome"};
             String[] arr7 = {"Do you know me?","you know me?","you know me","do you know me"};
             String[] arr8 = {"okay","oops","ok","oky","really","really?","oh","ohh"};
+            String[] add = {"add two numbers","add 2 numbers","add two number","add two number"};
+            String[] subtract = {"subtract two numbers","subtract 2 numbers","subtract two number","subtract two number"};
+            String[] multiply = {"multiply two numbers","multiply 2 numbers","multiply two number","multiply two number"};
+            String[] devide = {"devide two numbers","devide 2 numbers","devide two number","devide two number"};
+            String[] capabilities= {"what can you do?","what can you do","which operation can you perform","what operation can you perform"};
+            String[] greetings = {"nice to meet you","good to see you"};
             input = sc.nextLine();
 
             int i = 0;
             while (i<arr.length){
-                if (input.equals(arr[i])){
+                if (input.equalsIgnoreCase(arr[i])){
+                    count ++;
                     System.out.print("Bot : ");System.out.println("hey ");
                 }
                     i++;
             }
             i = 0;
             while (i<arr1.length){
-                if (input.equals(arr1[i])) {
-                    System.out.print("Bot : ");System.out.println("i don't have much things to tell you about me");
+                if (input.equalsIgnoreCase(arr1[i])) {
+                    count ++;
+                    System.out.print("Bot : ");System.out.println("i don't have much things to tell you but");
                     System.out.println("i am a \"chat bot\" and we can have simple conversation :)");
                 }
                 i++;
             }
             i = 0;
             while (i<arr3.length){
-                if (input.equals(arr3[i])) {
+                if (input.equalsIgnoreCase(arr3[i])) {
+                    count ++;
                     System.out.print("Bot : ");System.out.println("my pleasure :)");
                 }
                 i++;
             }
             i = 0;
             while (i<arr4.length){
-                if (input.equals(arr4[i])) {
+                if (input.equalsIgnoreCase(arr4[i])) {
+                    count ++;
                     System.out.print("Bot : ");System.out.println("Pritam made me as a project");
                 }
                 i++;
             }
             i = 0;
             while (i<arr5.length){
-                if (input.equals(arr5[i])) {
+                if (input.equalsIgnoreCase(arr5[i])) {
+                    count ++;
                     System.out.print("Bot : ");System.out.println("Thanks !!");
                 }
                 i++;
             }
             i = 0;
             while (i<arr7.length){
-                if (input.equals(arr7[i])) {
+                if (input.equalsIgnoreCase(arr7[i])) {
+                    count ++;
                     System.out.print("Bot : ");
                     System.out.println("NO! not much but i know your name ");
                     System.out.println("Your name is " + name);
@@ -80,11 +92,102 @@ class AI_Chatbot {
             }
             i = 0;
             while (i<arr8.length){
-                if (input.equals(arr8[i])) {
+                if (input.equalsIgnoreCase(arr8[i])) {
+                    count ++;
                     System.out.print("Bot : ");System.out.println("yeah");
                 }
                 i++;
             }
+            i = 0;
+            while (i<add.length){
+                if (input.equalsIgnoreCase(add[i])) {
+                    count ++;
+                    System.out.print("Bot : ");
+                    System.out.println("okay!");
+                    System.out.println("Enter first number : ");
+                    int num1 = sc.nextInt();
+                    System.out.println("Enter second number : ");
+                    int num2 = sc.nextInt();
+                    int addition = num1+num2;
+                    System.out.println("Answer is = "+ addition);
+
+                }
+                i++;
+            }
+            i = 0;
+            while (i<subtract.length){
+                if (input.equalsIgnoreCase(subtract[i])) {
+                    count ++;
+                    System.out.print("Bot : ");System.out.println("okay!");
+
+                    System.out.println("Enter first number : ");
+                    int num1 = sc.nextInt();
+                    System.out.println("Enter second number : ");
+                    int num2 = sc.nextInt();
+                    int ans = num1-num2;
+                    System.out.println("Answer is = "+ ans);
+
+                }
+                i++;
+            }
+            i = 0;
+            while (i<multiply.length){
+                if (input.equalsIgnoreCase(multiply[i])) {
+                    count ++;
+                    System.out.print("Bot : ");System.out.println("okay!");
+                    System.out.println("Enter first number : ");
+                    int num1 = sc.nextInt();
+                    System.out.println("Enter second number : ");
+                    int num2 = sc.nextInt();
+                    int ans = num1*num2;
+                    System.out.println("Answer is = "+ ans);
+                }
+                i++;
+            }
+            i = 0;
+            while (i<devide.length){
+                if (input.equalsIgnoreCase(devide[i])) {
+                    count ++;
+                    System.out.print("Bot : ");System.out.println("okay!");
+                    System.out.println("Enter first number : ");
+                    int num1 = sc.nextInt();
+                    System.out.println("Enter second number : ");
+                    int num2 = sc.nextInt();
+                    int ans = num1/num2;
+                    System.out.println("Answer is = "+ ans);
+                }
+                i++;
+            }
+            i = 0;
+            while (i<capabilities.length){
+                if (input.equalsIgnoreCase(capabilities[i])) {
+                    count ++;
+                    System.out.print("Bot : ");
+                    System.out.println("I can perform few operation like : ");
+                    System.out.println("\n-add/subtract/multiply/devide two numbers");
+                    System.out.println();
+                    System.out.println("And also you can ask some questions like : ");
+                    System.out.println("-Do you know me?" +
+                            "\n-who made you?" +
+                            "\n-tell me somthing about you" +
+                            "\n-what can you do");
+                    System.out.println();
+                    System.out.println("and also i can remember your");
+                }
+                i++;
+            }
+            i = 0;
+            while (i<greetings.length){
+                if (input.equalsIgnoreCase(greetings[i])) {
+                    count ++;
+                    System.out.println("you too !!");
+                }
+                i++;
+            }
+            if (count == 0){
+                System.out.println("didn't get that!!");
+            }
+            count = 0;
         }
         System.out.println("nice to meet you!! see you soon :)");
     }
