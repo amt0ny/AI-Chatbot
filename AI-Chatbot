@@ -1,0 +1,91 @@
+import java.util.Scanner;
+
+class AI_Chatbot {
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.print("Bot : ");System.out.println("Hey! what is your name");
+        String name = sc.nextLine();
+        System.out.print("Bot : ");System.out.println("Hello " + name + " Nice to meet you");
+        String input = "";
+
+        while (!input.equals("stop")) {
+
+            String[] arr = {"hey","hello","hi","hey there"};
+            String[] arr1 = {"tell me about yourself","who are you","tell me something about yourself"};
+            String[] arr3 = {"great","nice","awesome"};
+            String[] arr4 = {"who made you","who is your owner","who is your boss","who write your code"};
+            String[] arr5 = {"yeah nice to meet you too","nice to meet you too","yea","yeah","ya","you too","that is great","that is nice","that is awesome","you are great","you are nice","you are awesome"};
+            String[] arr7 = {"Do you know me?","you know me?","you know me","do you know me"};
+            String[] arr8 = {"okay","oops","ok","oky","really","really?","oh","ohh"};
+            input = sc.nextLine();
+
+            int i = 0;
+            while (i<arr.length){
+                if (input.equals(arr[i])){
+                    System.out.print("Bot : ");System.out.println("hey ");
+                }
+                    i++;
+            }
+            i = 0;
+            while (i<arr1.length){
+                if (input.equals(arr1[i])) {
+                    System.out.print("Bot : ");System.out.println("i don't have much things to tell you about me");
+                    System.out.println("i am a \"chat bot\" and we can have simple conversation :)");
+                }
+                i++;
+            }
+            i = 0;
+            while (i<arr3.length){
+                if (input.equals(arr3[i])) {
+                    System.out.print("Bot : ");System.out.println("my pleasure :)");
+                }
+                i++;
+            }
+            i = 0;
+            while (i<arr4.length){
+                if (input.equals(arr4[i])) {
+                    System.out.print("Bot : ");System.out.println("Pritam made me as a project");
+                }
+                i++;
+            }
+            i = 0;
+            while (i<arr5.length){
+                if (input.equals(arr5[i])) {
+                    System.out.print("Bot : ");System.out.println("Thanks !!");
+                }
+                i++;
+            }
+            i = 0;
+            while (i<arr7.length){
+                if (input.equals(arr7[i])) {
+                    System.out.print("Bot : ");
+                    System.out.println("NO! not much but i know your name ");
+                    System.out.println("Your name is " + name);
+                    System.out.println("if you want me to remember you tell me about :");
+                    System.out.print("Your Gender : ");String gender = sc.nextLine();
+                    System.out.print("Your age : ");int age = sc.nextInt();
+                    System.out.print("Your height : ");float height = sc.nextFloat();
+                    System.out.print("Your Job company : ");String company = sc.nextLine();
+                    System.out.print("Your job profile : ");String j_p = sc.nextLine();
+                    System.out.println("Okay! Now i have some information about you ");
+                    System.out.println("if you want to know type \" My details \"");
+                    String details = sc.nextLine();
+                    if (details.equals("My details")){
+                        System.out.println("So You are a "+gender+" your age is "+
+                                age+" your height is "+height+" and you are working as a" +
+                                j_p+" in "+company);
+                    }
+                }
+                i++;
+            }
+            i = 0;
+            while (i<arr8.length){
+                if (input.equals(arr8[i])) {
+                    System.out.print("Bot : ");System.out.println("yeah");
+                }
+                i++;
+            }
+        }
+        System.out.println("nice to meet you!! see you soon :)");
+    }
+}
